@@ -148,6 +148,7 @@ provision_aws() {
         MACHINE_CREATE_CMD="docker-machine create \
                     --driver amazonec2 \
                     --amazonec2-vpc-id ${AWS_VPC_ID} \
+		    --amazonec2-ami ami-c0464db9 \
                     --amazonec2-zone $VPC_AVAIL_ZONE \
                     --amazonec2-instance-type ${AWS_DOCKER_MACHINE_SIZE} \
                     --amazonec2-root-size ${AWS_ROOT_SIZE:-32}"
